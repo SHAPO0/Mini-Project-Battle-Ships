@@ -1,6 +1,7 @@
 # Mini-Project-Battle-Ships
+MINI PROJECT BATTLE SHIPS GAME JAVA PROGRAM
 
-This project will help you get more familiar with arrays. You will be recreating the game of battleships. A player will place 5 of their ships on a 10 by 10 grid. The computer player will deploy five ships on the same grid. Once the game starts the player and computer take turns, trying to sink each other's ships by guessing the coordinates to "attack". The game ends when either the player or computer has no ships left. 
+This project will help you get more familiar with arrays. You will be recreating the game of battleships. A player will place 5 of their ships on a 10 by 10 grid. The computer player will deploy five ships on the same grid. Once the game starts the player and computer take turns, trying to sink each other's ships by guessing the coordinates to "attack". The game ends when either the player or computer has no ships left.
 
 - Step 1 - Create the ocean map (Line 7 to 20 & Line 45 to 75)
 - Step 2 - Deploy player's ships (Line 77 to 104)
@@ -8,10 +9,24 @@ This project will help you get more familiar with arrays. You will be recreating
 - Step 4 - Battle (Line 29 to 35 & Line 121 to 190)
 - Step 5 - Game Over (Line 37 to 42)
 
+IMPORTANT NOTICE! THIS CODE USES JAVA SWITCH STATEMENT. SWITCH STATEMENT IS A NEW FEATURE COMPATIBLE WITH JDK 13 AND ABOVE. RECOMMENDED LTS JDK 17, 21. IF YOU ARE USING JDK 12 AND BELOW, YOU'LL NEED TO CONVERT THE SWITCH EXPRESSIONS TO SWITCH STATEMENTS. Switch statement example:
+
+switch(location){
+  case PLAYER_SHIP: {
+      System.out.println("Hello World");
+      break;
+  }
+  default: {
+      System.out.println("Hello World");
+      break;
+  }
+}
+
+
 Step 1 - CREATE THE OCEAN MAP (Line 7 to 20 & Line 45 to 75)
 
 Line 7 to 13
-Giving meaningfu variable names. Declared final and be given a value (initialised) because it is a requirement if a variable name is used in Switch statements & expressions. 
+Giving meaningful names to variables. Variables declared final and be given a value (initialised) because it is a requirement when a variable name is used in Switch statements & expressions. 
 
 Line 11 can be '\u0000' or '\000'. Why? Because in line 17, a new char[][] (2D char array) was created. The default value for char is '\u0000' or '\000'. EMPTY is a meaningful name (subjectively) for the unassigned. So we can refer any unassigned char (in the 2D array) with the name EMPTY.
 
