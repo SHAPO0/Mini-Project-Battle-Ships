@@ -1,4 +1,4 @@
-# Mini-Project-Battle-Ships
+# Battle Ship Game Java Program Assignment Project
 MINI PROJECT BATTLE SHIPS GAME JAVA PROGRAM
 
 Visit java source code link to download: <a href="https://github.com/Joshua-Ho-Gwok-Hin/Mini-Project-Battle-Ships/blob/main/BattleShipGame.java">BATTLE SHIPS GAME JAVA PROGRAM</a>
