@@ -11,11 +11,10 @@ This project will help you get more familiar with arrays. You will be recreating
 
 IMPORTANT NOTICE! THIS CODE USES JAVA SWITCH STATEMENT. SWITCH STATEMENT IS A NEW FEATURE COMPATIBLE WITH JDK 13 AND ABOVE. RECOMMENDED LTS JDK 17, 21. IF YOU ARE USING JDK 12 AND BELOW, YOU'LL NEED TO CONVERT THE SWITCH EXPRESSIONS TO SWITCH STATEMENTS. Switch statement example:
 
+```
 switch(location){
-
   case PLAYER_SHIP: {
-  
-      System.out.println("Hello World");
+        System.out.println("Hello World");
       break;
   }
   default: {
@@ -23,7 +22,7 @@ switch(location){
       break;
   }
 }
-
+```
 
 Step 1 - CREATE THE OCEAN MAP (Line 7 to 20 & Line 45 to 75)
 
