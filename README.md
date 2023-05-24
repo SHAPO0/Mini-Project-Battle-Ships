@@ -12,9 +12,18 @@ This project will help you get more familiar with arrays. You will be recreating
 IMPORTANT NOTICE! THIS CODE USES JAVA SWITCH STATEMENT. SWITCH STATEMENT IS A NEW FEATURE COMPATIBLE WITH JDK 13 AND ABOVE. (RECOMMEND LTS JDK 17 or 21.) IF YOU ARE USING JDK 12 AND BELOW, YOU'LL NEED TO CONVERT THE SWITCH EXPRESSIONS TO SWITCH STATEMENTS. Switch statement example:
 
 ```
+// This is a switch expression on line 50 to 53 (JDK 13 and above)
+
+switch (location) {
+    case PLAYER_SHIP -> System.out.print('@' + " ");
+    case EMPTY, COMPUTER_MISSED -> System.out.print(' ' + " "); // add COMPUTER_SHIP after testing
+    default -> System.out.print(location + " "); // PLAYER_MISSED, PLAYER_SUNKEN, COMPUTER_SUNKEN
+}
+
+
 // This switch statement can replace the switch expression on line 50 to 53.
 
-  switch (location) {
+ switch (location) {
       case PLAYER_SHIP: {
           System.out.print('@' + " ");
           break;
