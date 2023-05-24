@@ -52,9 +52,12 @@ Line 62 to 75 are hardcoded.
 Line 45 to 60 uses a combination of a for-loop, for-each loop and switch expressions to print out each char. I've added +  " " for aesthetic purposes. " " is a string with a space. The for-loop is neccessary because of the index used for the left and right sides. The inner loop and also be rewriten with another for-loop (int j = 0; j < oceanMap[i] ;  j++). If using 2 for-loops, the switch becomes switch ( oceanMap[i][j]).
 
 
+
 Step 2 - DEPLOY PLAYER'S SHIPS (Line 77 to 104)
 
-Line 77 to 92 is to check the player's input to prevent wrong data type entered. Without this method, the program will stop when a non number is entered. Line 78 uses a technique similar to a boolean flag. It wil exit the while-loop (continue out of the loop)only if a proper number is entered. Line 82 (input.nextLine();) is important. Line 81 is asking if input is not a number (means its a string), put an "Enter" so that the program can continue. Line 83 means the input is a number and then assigning variable i with the number entered on line 84. Line 85 to 87 basically modify i to become -1 if the number is wrong and then the user have to key in another number again.
+Line 77 to 92 is to check the player's input to prevent wrong data type entered. Without this method, the program will stop when a non number is entered. 
+Line 78 uses a technique similar to a boolean flag. It wil exit the while-loop (continue out of the loop)only if a proper number is entered. 
+Line 82 (input.nextLine();) is important. Line 81 is asking if input is not a number (means its a string), put an "Enter" so that the program can continue. Line 83 means the input is a number and then assigning variable i with the number entered on line 84. Line 85 to 87 basically modify i to become -1 if the number is wrong and then the user have to key in another number again.
 Line 94 to 104 assign local variables x and y as indexes/indices. The JVM then uses the numbers to change the value of oceanMap[x][y] to char '1' (PLAYER_SHIP = '1') if it is not already assigned. Line 95 let this repeat untill 5 ships are deployed.
 
 
@@ -70,6 +73,7 @@ Line 29 to 35 basically is a while-loop that continues until either playerDeploy
 Line 121 to 136 attack(char) is like a "helper method" similar to the assign(char) method on line 77. Infact, both are the same method except for the println() message on line 80 and 124. Purpose is to validate the player's input.
 Line 138 to 158 changes the value of individual characters in oceanMap 2D char array. Either playerDeployed or computerDeployed gotten -1 or it's a missed. For player's case, a '-' is printed (Line 53).
 Line 160 to 189 is almost identical to the playerAttack() except that instead of using the attack(char) as validation, It is using a Random to generate defined numbers (0, 1, 2, 3, 4, 5, 6, 7, 8 & 9). 
+
 
 Step 5 - GAME OVER (Line 37 to 42)
 
