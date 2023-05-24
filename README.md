@@ -28,14 +28,15 @@ switch (location) {
  switch (location) {
       case PLAYER_SHIP: {
           System.out.print('@' + " ");
-          break;
+          break;    // This break here is required.
       }
-      case EMPTY, COMPUTER_MISSED:{ 
+      case EMPTY, COMPUTER_MISSED:  { 
           System.out.print(' ' + " "); 
-          break;
+          break;    // This break here is required.
       }
       default: { 
           System.out.print(location + " "); 
+          break:    // This break here is optional, not required in default.
       }
   }
 ```
