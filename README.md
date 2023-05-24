@@ -74,6 +74,6 @@ Finally, once the program exit the while-loop at line 29, the Game Over message 
 
 P.S: I've not created any variable name or method signature as Battle() or GameOver(). You can try create your method to make it look neater.
 
-<a href="https://github.com/Joshua-Ho-Gwok-Hin/Mini-Project-Battle-Ships/blob/main/BattleShipGame.java">Mini Project Battle Ships Game Java Program</a>
+<a href="https://github.com/Joshua-Ho-Gwok-Hin/Mini-Project-Battle-Ships/tree/main">Mini Project Battle Ships Game Java Program</a>
 
 Link: https://courses.edx.org/courses/course-v1:Microsoft+DEV277x+1T2018/courseware/76c11a375a0e495e83ab68121566fb12/8f250da826d7405d8fecf99aca3a5e9a/?child=first 
