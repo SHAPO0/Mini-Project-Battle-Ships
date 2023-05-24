@@ -9,19 +9,23 @@ This project will help you get more familiar with arrays. You will be recreating
 - Step 4 - Battle (Line 29 to 35 & Line 121 to 190)
 - Step 5 - Game Over (Line 37 to 42)
 
-IMPORTANT NOTICE! THIS CODE USES JAVA SWITCH STATEMENT. SWITCH STATEMENT IS A NEW FEATURE COMPATIBLE WITH JDK 13 AND ABOVE. RECOMMENDED LTS JDK 17, 21. IF YOU ARE USING JDK 12 AND BELOW, YOU'LL NEED TO CONVERT THE SWITCH EXPRESSIONS TO SWITCH STATEMENTS. Switch statement example:
+IMPORTANT NOTICE! THIS CODE USES JAVA SWITCH STATEMENT. SWITCH STATEMENT IS A NEW FEATURE COMPATIBLE WITH JDK 13 AND ABOVE. (RECOMMEND LTS JDK 17 or 21.) IF YOU ARE USING JDK 12 AND BELOW, YOU'LL NEED TO CONVERT THE SWITCH EXPRESSIONS TO SWITCH STATEMENTS. Switch statement example:
 
 ```
-switch(location){
-  case PLAYER_SHIP: {
-        System.out.println("Hello World");
-      break;
+  switch (location) {
+      case PLAYER_SHIP: {
+          System.out.print('@' + " ");
+          break;
+      }
+      case EMPTY, COMPUTER_MISSED:{
+          System.out.print(' ' + " "); // add COMPUTER_SHIP after testing
+          break;
+      }
+      default: {
+          System.out.print(location + " "); // PLAYER_MISSED, PLAYER_SUNKEN, COMPUTER_SUNKEN
+          break;
+      }
   }
-  default: {
-      System.out.println("Hello World");
-      break;
-  }
-}
 ```
 
 Step 1 - CREATE THE OCEAN MAP (Line 7 to 20 & Line 45 to 75)
