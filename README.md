@@ -23,7 +23,6 @@ IMPORTANT NOTICE! THIS CODE USES JAVA SWITCH STATEMENT. SWITCH STATEMENT IS A NE
       }
       default: {
           System.out.print(location + " "); // PLAYER_MISSED, PLAYER_SUNKEN, COMPUTER_SUNKEN
-          break;
       }
   }
 ```
