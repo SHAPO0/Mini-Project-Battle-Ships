@@ -17,12 +17,12 @@ IMPORTANT NOTICE! THIS CODE USES JAVA SWITCH STATEMENT. SWITCH STATEMENT IS A NE
           System.out.print('@' + " ");
           break;
       }
-      case EMPTY, COMPUTER_MISSED:{
-          System.out.print(' ' + " "); // add COMPUTER_SHIP after testing
+      case EMPTY, COMPUTER_MISSED:{ 
+          System.out.print(' ' + " "); 
           break;
       }
-      default: {
-          System.out.print(location + " "); // PLAYER_MISSED, PLAYER_SUNKEN, COMPUTER_SUNKEN
+      default: { 
+          System.out.print(location + " "); 
       }
   }
 ```
