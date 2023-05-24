@@ -8,4 +8,4 @@ This project will help you get more familiar with arrays. You will be recreating
 - Step 4 - Battle (Line 29 to 35 & Line 121 to 190)
 - Step 5 - Game Over (Line 37 to 42)
 
-link: https://courses.edx.org/courses/course-v1:Microsoft+DEV277x+1T2018/courseware/76c11a375a0e495e83ab68121566fb12/8f250da826d7405d8fecf99aca3a5e9a/?child=first 
+Link: https://courses.edx.org/courses/course-v1:Microsoft+DEV277x+1T2018/courseware/76c11a375a0e495e83ab68121566fb12/8f250da826d7405d8fecf99aca3a5e9a/?child=first 
