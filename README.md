@@ -13,6 +13,7 @@ IMPORTANT NOTICE! THIS CODE USES JAVA SWITCH STATEMENT. SWITCH STATEMENT IS A NE
 
 ```
 // This switch statement can replace the switch expression on line 50 to 53.
+
   switch (location) {
       case PLAYER_SHIP: {
           System.out.print('@' + " ");
