@@ -1,6 +1,10 @@
 # BattleShipGame.java - Battle Ships Game Java Program Coding Project Assignment 
 
-Visit java source code link to download: <a href="https://github.com/Joshua-Ho-Gwok-Hin/Mini-Project-Battle-Ships/blob/main/BattleShipGame.java">BattleShipGame.java</a>
+Visit java source code link to download: 
+- <a href="https://github.com/Joshua-Ho-Gwok-Hin/Mini-Project-Battle-Ships/blob/main/BattleShipGame.java">BattleShipGame.java</a>
+- <a href="https://github.com/Joshua-Ho-Gwok-Hin/Mini-Project-Battle-Ships/blob/main/BattleShipGame.java">Battle Ship Game Java</a>
+
+
 
 This project will help you get more familiar with arrays. You will be recreating the game of battleships. A player will place 5 of their ships on a 10 by 10 grid. The computer player will deploy five ships on the same grid. Once the game starts the player and computer take turns, trying to sink each other's ships by guessing the coordinates to "attack". The game ends when either the player or computer has no ships left.
 
