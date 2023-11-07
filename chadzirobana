@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="game.css">
+	<title>Battleship</title>
+</head>
+<body>
+
+		<div id="board-container">
+			<!-- First Board -->
+			<div id="board1">
+				<div id="messageArea1"></div>
+				<table>
+					<tr>
+						<th class="numbers"></th>
+						<th class="numbers">0</th>
+						<th class="numbers">1</th>
+				        <th class="numbers">2</th>
+				        <th class="numbers">3</th>
+				        <th class="numbers">4</th>
+				        <th class="numbers">5</th>
+				        <th class="numbers">6</th>
+				        <th class="numbers">7</th>
+				        <th class="numbers">8</th>
+				        <th class="numbers">9</th>
+					</tr>
+					<script>
+						for (let row = 1; row <= 10; row++) {
+							document.write('<tr>');
+							if (row === 10) {
+								document.write('<th class="letters">J</th>');
+							} else {
+								const letter = String.fromCharCode(64 + row);
+								document.write(`<th class="letters">${letter}</th>`);
+							}
+							for (let col = 0; col < 10; col++) {
+								const cellNumber = (row - 1) * 10 + col + 1;
+								document.write(`<td><div id="${cellNumber}"></div></td>`);
+							}
+							document.write('</tr>');
+						}
+					</script>				
+					</table>
+			</div>
+		
+			<!-- Second Board -->
+			<div id="board2">
+				<div id="messageArea2"></div>
+				<table>
+					<tr>
+						<th class="numbers"></th>
+						<th class="numbers">0</th>
+						<th class="numbers">1</th>
+				        <th class="numbers">2</th>
+				        <th class="numbers">3</th>
+				        <th class="numbers">4</th>
+				        <th class="numbers">5</th>
+				        <th class="numbers">6</th>
+				        <th class="numbers">7</th>
+				        <th class="numbers">8</th>
+				        <th class="numbers">9</th>
+						</tr>
+						<script>
+							for (let row = 1; row <= 10; row++) {
+								document.write('<tr>');
+								if (row === 10) {
+									document.write('<th class="letters">J</th>');
+								} else {
+									const letter = String.fromCharCode(64 + row);
+									document.write(`<th class="letters">${letter}</th>`);
+								}
+								for (let col = 0; col < 10; col++) {
+									const cellNumber = (row - 1) * 10 + col + 1;
+									document.write(`<td><div id="${cellNumber}"></div></td>`);
+								}
+								document.write('</tr>');
+							}
+						</script>	
+				</table>
+			</div>
+		</div>
+		
+	
+	
+	<script src="game.js"></script>
+</body>
+</html>
+              _________________
+
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #6FC3ED;
+}
+#board1{
+  position: relative;
+	width: 50%;
+	min-width: 400px;
+}
+#messageArea1{
+	width: 105%;
+	text-align: center;
+	margin-top: 100px;
+	color: #f4f8ff;
+	font-family: "Fascinate Inline";
+	font-size: 20px;
+}
+
+#board2 {
+	margin-top: -455px;
+	width: 150%;
+	min-width: 400px;
+}
+
+#messageArea2 {
+	width: 105%;
+	text-align: center;
+	margin-top: 5px;
+	color: #f4f8ff;
+	font-family: "Fascinate Inline";
+	font-size: 20px;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 1px;
+	margin: 0 auto;
+}
+
+td {
+	position: relative;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #152C59;
+	border-radius: 10px;
+}
+
+td:hover {
+	background: #538daa;
+}
+
+td div {
+ 	width: 30px;
+	height: 30px;
+ }
+
+.numbers, .letters {
+	text-align: center;
+	font-size: 20px;
+	font-family: "Baloo Bhaina";
+	color: #f4f8ff;
+	height: 40px;
+	width: 40px;
+	border: none;
+}
+
+.hit {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 36px;
+  height: 20px;
+  background: #851B15;
+  border-radius: 3px 3px 20px 20px;
+  animation: wave 1s ease-in-out infinite alternate;
+}
+
+ @keyframes wave {
+  0% {transform: rotate(-7deg)}
+  100% {transform: rotate(5deg)}
+}
+
+.hit::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  background: #D2995F; 
+  border-radius: 50%;
+  box-shadow: 5px 0 #FCCE9E,
+}
+
+.hit::before {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  width: 8px;
+  height: 18px;
+  background: #5A0400;
+  box-shadow: 15px 4px 0 -4px #AC3B35;  
+}
+
+.miss {
+  width: 42px;
+  height: 7px;
+  position: absolute;
+  top: 15px;
+  left: -4px;
+  border-radius: 5px;
+  background: #47002B;
+  transform-origin: center center;
+  transform: rotate(45deg);
+  box-shadow: 3px 3px #C77DAA;
+  animation: blow 0.5s ease-in;
+}
+
+@keyframes blow {
+  0% {transform: scale(0);}
+  1% {transform: rotate(45deg);}
+  80% {transform: scale(1.7);}
+  100% {transform: scale(1);}
+}
+
+.miss::after {
+  content: '';
+  width: 42px;
+  height: 7px;
+  position: absolute;
+  border-radius: 5px;
+  background: #47002B;
+  transform: rotate(90deg);
+  box-shadow: 3px -3px #C77DAA;
+}
+_________________
+
+var model = {
+	name:player1
+    boardSize: 10,
+    numShips: 5,
+    shipLength: 4, 
+    shipsSunk: 0,
+
+    ships:[
+    { locations: [0, 0, 0, 0], hits: ["", "", "", ""] },
+    { locations: [0, 0, 0, 0], hits: ["", "", "", ""] },
+    { locations: [0, 0, 0, 0], hits: ["", "", "", ""] },
+    { locations: [0, 0, 0, 0], hits: ["", "", "", ""] },
+    { locations: [0, 0, 0, 0], hits: ["", "", "", ""] }
+
+    ],
+
+    fire: function(guess) {
+        for (var i = 0; i < this.numShips; i++) {
+            var ship = this.ships[i];
+            var index = ship.locations.indexOf(guess);
+          if (ship.hits[index] === "hit") {
+                view.displayMessage("You hit this ship before.");
+                return true;
+            } else if (index >= 0) {
+                    ship.hits[index] = "hit";
+                    view.displayHit(guess);
+                    view.displayMessage("It's a hit!");
+                    if (this.isSunk(ship)) {
+                        view.displayMessage("You sunk my battleship!");
+                        this.shipsSunk++;
+                    }
+                    return true;
+                }
+        }
+        view.displayMiss(guess);
+        view.displayMessage("It's a miss!");
+        return false;
+    },
+
+    isSunk: function(ship) {
+        for (i = 0; i < this.shipLength; i++) {
+            if (ship.hits[i] !== "hit") {
+                return false;
+            }
+        }
+        return true;
+    },
+
+    generateShipLocations: function() {
+        var locations;
+        for (var i = 0; i < this.numShips; i++) {
+            do {
+                locations = this.generateShip();
+            } while (this.collision(locations));
+                this.ships[i].locations = locations;
+        }
+                console.log("Ship table:");
+        console.log(this.ships);
+    },
+
+    generateShip: function() {
+        var direction = Math.floor(Math.random() * 2);
+        var row, col;
+
+        if (direction === 1) { //horizontal
+            row = Math.floor(Math.random() * this.boardSize);
+            col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+        } else { //vertical
+            row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+            col = Math.floor(Math.random() * this.boardSize);
+        }
+
+        var newShipLocations = [];
+        for (var i = 0; i < this.shipLength; i++) {
+            if (direction === 1) {
+                newShipLocations.push(row + "" + (col + i));
+            } else {
+                newShipLocations.push((row + i) + "" + col);
+            }
+        }
+        return newShipLocations;
+    },
+
+    collision: function(locations) {
+        for (var i = 0; i < this.numShips; i++) {
+            var ship = this.ships[i];
+            for (var j = 0; j < locations.length; j++) {
+                if (ship.locations.indexOf(locations[j]) >= 0) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+};
+
+var view = {
+    displayMessage: function(msg) {
+        var messageArea = document.getElementById("messageArea");
+        messageArea.innerHTML = msg;
+    },
+
+    displayHit: function(location) {
+        var cell = document.getElementById(location);
+        cell.setAttribute("class","hit");
+
+    },
+
+    displayMiss: function(location) {
+        var cell = document.getElementById(location);
+        cell.setAttribute("class","miss");
+    }
+};
+
+var controller = {
+    guesses: 0,
+    processGuess: function(location) {
+        if (location) {
+            this.guesses++;
+            var hit = model.fire(location);
+            if (hit && model.shipsSunk === model.numShips) {
+                view.displayMessage("You sunk all of my battleships in " + this.guesses + " tries.");
+                var end = document.getElementById("guessInput").disabled = true;
+            }
+        }
+    }
+}
+
+window.onload = init;
+
+function init() {
+
+    var guessClick = document.getElementsByTagName("td");
+        for (var i = 0; i < guessClick.length; i++) {
+            guessClick[i].onclick = answer;
+        }
+
+    model.generateShipLocations();
+    view.displayMessage("Hello, let's play! There are 3 ships, each 3 cells long");
+}
+
+function answer(eventObj) {
+    var shot = eventObj.target;
+    var location = shot.id;
+    controller.processGuess(location);
+}
